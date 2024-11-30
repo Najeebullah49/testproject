@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Creating najeebweb/web folder"
+      - mkdir -p ./najeebweb/web/
+
+  build:
+    commands:
+      - echo "Copying index.html to najeebweb/web"
+      - cp index.html ./najeebweb/web/
+
+artifacts:
+  files:
+    - najeebweb/web/**/*
+    - appspec.yml
